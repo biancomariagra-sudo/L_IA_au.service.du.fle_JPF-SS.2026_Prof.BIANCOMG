@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>L'AI AU SERVICE DU FLE - Prof. Maria Grazia Bianco</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+            .section-card { padding: 2.5rem; }
+        }
+        .solution-panel {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn-check {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-check:active { transform: scale(0.96); }
+        
+        input, select {
+            appearance: none;
+            background-color: #ffffff;
+        }
+        .atelier-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- HEADER -->
+    <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex flex-col">
+                <h1 class="text-sm md:text-lg font-black gradient-text italic tracking-tighter uppercase">🤖 L'AI AU SERVICE DU FLE - Prof. Maria Grazia Bianco</h1>
+                <span class="text-[8px] md:text-[10px] font-bold text-slate-400 uppercase tracking-widest">SITE CREATED BY PROF. MARIA GRAZIA BIANCO</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-[10px] font-black uppercase tracking-widest text-slate-500">
+                <a href="#intro" class="hover:text-indigo-600">🏠 Accueil</a>
+                <a href="#theorie" class="hover:text-indigo-600">🧠 Fondations</a>
+                <a href="#ateliers" class="hover:text-indigo-600">🛠️ Ateliers</a>
+            </nav>
+            <div class="md:hidden text-[10px] font-bold text-indigo-600">FLE 2026</div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="intro" class="bg-slate-900 text-white pt-16 pb-20 px-6 relative overflow-hidden">
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <div class="inline-block px-3 py-1 rounded-full bg-indigo-500 text-[9px] font-black uppercase mb-6 tracking-widest">🚀 SESSION MASTERCLASS 2026</div>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">L'AI AU SERVICE DU FLE 💡<br><span class="text-indigo-400 italic">Amplifiez votre pédagogie. ✨</span></h2>
+            <p class="text-base md:text-lg text-slate-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                L'IA n'est pas un remplaçant, c'est votre assistant personnel 🤖. Elle amplifie votre créativité pour des supports plus vivants, clairs et engageants. Devenez l'architecte du futur. 💎
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#ateliers" class="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold text-md shadow-lg shadow-indigo-500/20 active:scale-95 transition">🔥 DÉMARRER LES ATELIERS</a>
+                <div class="flex items-center justify-center space-x-2 text-[10px] text-slate-500 font-bold">
+                    <span>SITE CREATED BY PROF. MARIA GRAZIA BIANCO</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-indigo-500 rounded-full blur-[100px]"></div>
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-pink-500 rounded-full blur-[120px]"></div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-12 max-w-5xl">
+        
+        <!-- THEORY SECTION -->
+        <section id="theorie" class="mb-24">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-4xl font-black mb-2 uppercase tracking-tight">🏛️ Les Fondations Théoriques</h3>
+                <p class="text-slate-500 italic text-sm md:text-base font-medium">Comprendre l'écosystème IA pour le FLE. 🏗️</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div class="bg-white p-6 rounded-2xl border-b-4 border-indigo-500 shadow-sm">
+                    <span class="text-2xl mb-4 block">✍️</span>
+                    <h4 class="font-bold text-indigo-600 mb-1">ChatGPT</h4>
+                    <p class="text-[11px] text-slate-500">Narration, brainstorming et jeux de rôle. Idéal pour humaniser vos supports. 🎭</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border-b-4 border-pink-500 shadow-sm">
+                    <span class="text-2xl mb-4 block">🎬</span>
+                    <h4 class="font-bold text-pink-600 mb-1">Gemini</h4>
+                    <p class="text-[11px] text-slate-500">Multimédia : analyse vidéo YouTube et intégration Google Workspace. 🌐</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border-b-4 border-emerald-500 shadow-sm">
+                    <span class="text-2xl mb-4 block">📚</span>
+                    <h4 class="font-bold text-emerald-600 mb-1">NotebookLM</h4>
+                    <p class="text-[11px] text-slate-500">Expertise factuelle : génère des contenus basés strictement sur vos PDF. 🛡️</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border-b-4 border-orange-500 shadow-sm">
+                    <span class="text-2xl mb-4 block">🎨</span>
+                    <h4 class="font-bold text-orange-600 mb-1">Napkin AI</h4>
+                    <p class="text-[11px] text-slate-500">Le designer flash : transforme le texte en schémas et icônes clairs. 📊</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-8 md:p-12 rounded-[2.5rem] shadow-xl">
+                <h4 class="text-xl md:text-2xl font-black mb-8 text-center uppercase text-indigo-400 italic underline">Framework CREATE 🛠️</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-sm border-l-2 border-indigo-500 pl-4"><span class="font-black text-indigo-400">C</span> <br><b>Caractère</b> : Rôle de l'IA (ex: Prof de FLE).</div>
+                    <div class="text-sm border-l-2 border-indigo-500 pl-4"><span class="font-black text-indigo-400">R</span> <br><b>Requête</b> : La tâche précise (ex: un quiz).</div>
+                    <div class="text-sm border-l-2 border-indigo-500 pl-4"><span class="font-black text-indigo-400">E</span> <br><b>Exemples</b> : Modèles ou tonalité.</div>
+                    <div class="text-sm border-l-2 border-indigo-500 pl-4"><span class="font-black text-indigo-400">A</span> <br><b>Ajustement</b> : Niveau (A2, B1...) et ton.</div>
+                    <div class="text-sm border-l-2 border-indigo-500 pl-4"><span class="font-black text-indigo-400">T</span> <br><b>Type de Sortie</b> : Format (Tableau, PDF).</div>
+                    <div class="text-sm border-l-2 border-indigo-500 pl-4"><span class="font-black text-indigo-400">E</span> <br><b>Extras</b> : Contraintes ("Évite le jargon").</div>
+                </div>
+                <p class="mt-10 text-center text-[10px] italic text-slate-500 font-bold border-t border-slate-800 pt-6 uppercase tracking-widest">CONTEXTE + STANDARDS = QUALITÉ ⭐</p>
+            </div>
+        </section>
+
+        <!-- WORKSHOPS SECTION -->
+        <section id="ateliers" class="space-y-16">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-4xl font-black mb-2 uppercase tracking-tight">🛠️ Ateliers d'Architecture</h3>
+                <p class="text-slate-500 italic text-sm md:text-base font-medium">Mise en pratique immersive pour le FLE. 💪</p>
+            </div>
+
+            <!-- ATELIER 1 -->
+            <div class="section-card border-l-8 border-indigo-600">
+                <div class="atelier-title">
+                    <span class="bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-black">1</span>
+                    <h4 class="text-xl font-black">Stratégie : Choisir le bon outil 🤝</h4>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="p-4 bg-slate-50 rounded-xl">
+                        <p class="text-xs font-bold mb-3">📺 Scénario A : Je veux analyser une vidéo YouTube sur la francophonie et générer un script pédagogique avec des images.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <select id="ex1-a1" class="w-full p-3 rounded-lg border text-xs bg-white">
+                                <option value="">Action 1 : Analyse Vidéo</option>
+                                <option value="gemini">Gemini 🎬</option>
+                                <option value="gpt">ChatGPT ✍️</option>
+                            </select>
+                            <select id="ex1-a2" class="w-full p-3 rounded-lg border text-xs bg-white">
+                                <option value="">Action 2 : Schémas Visuels</option>
+                                <option value="napkin">Napkin AI 📊</option>
+                                <option value="notebook">NotebookLM 📚</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl">
+                        <p class="text-xs font-bold mb-3">📑 Scénario B : Je veux créer un guide de grammaire basé exclusivement sur mes propres notes de cours (PDF).</p>
+                        <select id="ex1-b" class="w-full p-3 rounded-lg border text-xs bg-white">
+                            <option value="">L'outil pour la fidélité...</option>
+                            <option value="gpt">ChatGPT ✍️</option>
+                            <option value="notebook">NotebookLM 📚</option>
+                        </select>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl">
+                        <p class="text-xs font-bold mb-3">🎭 Scénario C : Je veux créer un dialogue de jeu de rôle entre un touriste et un boulanger, avec beaucoup d'humour.</p>
+                        <select id="ex1-c" class="w-full p-3 rounded-lg border text-xs bg-white">
+                            <option value="">L'outil pour la narration...</option>
+                            <option value="gpt">ChatGPT ✍️</option>
+                            <option value="gemini">Gemini 🎬</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <button onclick="testEx1()" class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold text-xs btn-check">✅ VÉRIFIER LES CHOIX</button>
+                        <button onclick="toggleSol('sol1')" class="text-indigo-600 font-bold text-xs p-3">👁️ LOGIQUE</button>
+                    </div>
+                    <div id="res1" class="hidden text-xs"></div>
+                    <div id="sol1" class="solution-panel p-4 bg-indigo-50 border border-indigo-100 rounded-xl text-xs">
+                        <b>Analyse :</b> <br>
+                        - Vidéo = <b>Gemini</b> (Google ecosystem). <br>
+                        - Visuels rapides = <b>Napkin</b>. <br>
+                        - Source fermée (PDF) = <b>NotebookLM</b>. <br>
+                        - Humour et narration = <b>ChatGPT</b>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ATELIER 2 -->
+            <div class="section-card border-l-8 border-pink-600">
+                <div class="atelier-title">
+                    <span class="bg-pink-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-black">2</span>
+                    <h4 class="text-xl font-black">Anatomie : Décomposer le Prompt 🔬</h4>
+                </div>
+                
+                <div class="space-y-8">
+                    <div>
+                        <div class="bg-slate-900 text-slate-300 p-5 rounded-xl font-mono text-[10px] mb-4 leading-relaxed">
+                            Prompt 1: "Tu es un tuteur de français. Crée un quiz de 5 questions sur le subjonctif pour un niveau B1. Format: Liste à puces."
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" id="ex2-r1" class="p-3 rounded-lg border text-xs" placeholder="Quel est le Rôle ?">
+                            <input type="text" id="ex2-t1" class="p-3 rounded-lg border text-xs" placeholder="Quelle est la Tâche ?">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="bg-slate-900 text-slate-300 p-5 rounded-xl font-mono text-[10px] mb-4 leading-relaxed border-t-4 border-pink-500">
+                            Prompt 2: "En tant qu'expert FLE, rédige une courte histoire sur Paris au futur simple. Utilise un ton poétique et évite le jargon."
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" id="ex2-r2" class="p-3 rounded-lg border text-xs" placeholder="Quel est l'Ajustement (Ton) ?">
+                            <input type="text" id="ex2-t2" class="p-3 rounded-lg border text-xs" placeholder="Quel est le Type de sortie ?">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="testEx2()" class="bg-pink-600 text-white px-6 py-3 rounded-xl font-bold text-xs btn-check">🔍 ANALYSER</button>
+                        <button onclick="toggleSol('sol2')" class="text-pink-600 font-bold text-xs p-3">👁️ SOLUTIONS</button>
+                    </div>
+                    <div id="res2" class="hidden text-xs"></div>
+                    <div id="sol2" class="solution-panel p-4 bg-pink-50 border border-pink-100 rounded-xl text-xs">
+                        <b>Solutions :</b> <br>
+                        Prompt 1: Rôle = Tuteur FLE | Tâche = Quiz Subjonctif. <br>
+                        Prompt 2: Ton = Poétique | Sortie = Histoire (Texte).
+                    </div>
+                </div>
+            </div>
+
+            <!-- ATELIER 3 -->
+            <div class="section-card border-l-8 border-emerald-600">
+                <div class="atelier-title">
+                    <span class="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-black">3</span>
+                    <h4 class="text-xl font-black">Création : Le Prompt Universel FLE 📝</h4>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
+                        <p class="text-[11px] font-bold mb-4 uppercase text-emerald-800">Mission 1 : Le scénariste de dialogues</p>
+                        <div class="text-xs md:text-sm leading-loose">
+                            [C] "Tu es un <input type="text" id="ex3-c1" class="border-b-2 border-emerald-400 bg-transparent outline-none w-28 text-center font-bold" placeholder="Caractère"> spécialisé en FLE.
+                            [R] Rédige un <input type="text" id="ex3-r1" class="border-b-2 border-emerald-400 bg-transparent outline-none w-28 text-center font-bold" placeholder="Requête"> entre deux amis.
+                            [A] Le niveau doit être <input type="text" id="ex3-a1" class="border-b-2 border-emerald-400 bg-transparent outline-none w-24 text-center font-bold" placeholder="Niveau CECRL">."
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-100 border-dashed">
+                        <p class="text-[11px] font-bold mb-4 uppercase text-emerald-800">Mission 2 : Le créateur d'exit tickets</p>
+                        <div class="text-xs md:text-sm leading-loose">
+                            [R] "Génère 3 questions d' <input type="text" id="ex3-r2" class="border-b-2 border-emerald-400 bg-transparent outline-none w-28 text-center font-bold" placeholder="Tâche"> finale.
+                            [T] Présente le résultat sous forme de <input type="text" id="ex3-t2" class="border-b-2 border-emerald-400 bg-transparent outline-none w-28 text-center font-bold" placeholder="Format">. 
+                            [E] Ajoute une <input type="text" id="ex3-e2" class="border-b-2 border-emerald-400 bg-transparent outline-none w-28 text-center font-bold" placeholder="Extra"> amusante à la fin."
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button onclick="testEx3()" class="bg-emerald-600 text-white px-6 py-3 rounded-xl font-bold text-xs btn-check">🚀 VALIDER L'ARCHITECTURE</button>
+                    </div>
+                    <div id="res3" class="hidden text-xs"></div>
+                </div>
+            </div>
+
+            <!-- ATELIER 4 -->
+            <div class="section-card border-l-8 border-orange-600">
+                <div class="atelier-title">
+                    <span class="bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-black">4</span>
+                    <h4 class="text-xl font-black">Jugement : Quelle ressource est "Prête" ? ⚖️</h4>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-xs font-bold mb-3">Sujet : Créer une fiche de vocabulaire sur la gastronomie (A2).</p>
+                        <div class="space-y-2">
+                            <button onclick="testEx4(1)" class="w-full text-left p-4 border rounded-xl hover:bg-orange-50 text-[11px] transition">Option A : "Fais une liste de mots sur la cuisine." ❌</button>
+                            <button onclick="testEx4(2)" class="w-full text-left p-4 border rounded-xl hover:bg-orange-50 text-[11px] transition">Option B : "Tu es prof de FLE. Donne 10 mots de cuisine pour des A2." ⚠️</button>
+                            <button onclick="testEx4(3)" class="w-full text-left p-4 border-2 border-orange-100 rounded-xl hover:bg-orange-50 text-[11px] transition font-medium">Option C : "Tu es concepteur FLE. Crée une fiche de vocabulaire sur 'faire les courses' pour un niveau A2. Inclus les articles partitifs, présente-les dans un tableau 'Rayon / Aliment / Quantité' et évite les aliments trop rares." ✅</button>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-orange-100">
+                        <p class="text-xs font-bold mb-3">Sujet : Expliquer la différence entre Passé Composé et Imparfait.</p>
+                        <div class="space-y-2">
+                            <button onclick="testEx4(4)" class="w-full text-left p-4 border rounded-xl hover:bg-orange-50 text-[11px] transition">Option D : "Explique la différence PC/Imparfait." ❌</button>
+                            <button onclick="testEx4(5)" class="w-full text-left p-4 border-2 border-orange-100 rounded-xl hover:bg-orange-50 text-[11px] transition font-medium">Option E : "Tu es un expert FLE. Utilise l'analogie du 'décor' et de 'l'action' pour expliquer la différence entre Imparfait et Passé Composé. Rédige un court paragraphe de 100 mots maximum, niveau B1, ton encourageant." ✅</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="res4" class="hidden text-xs"></div>
+            </div>
+        </section>
+
+        <!-- RESOURCES -->
+        <section id="ressources" class="mt-24">
+            <h3 class="text-center text-slate-400 font-black uppercase tracking-[0.3em] mb-10 text-[10px]">Teaching & Studying Resources</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://chat.openai.com" target="_blank" class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 text-center hover:-translate-y-1 transition group">
+                    <span class="text-xl block mb-2 group-hover:scale-125 transition-transform">✍️</span>
+                    <span class="text-[9px] font-black uppercase text-slate-400">ChatGPT</span>
+                </a>
+                <a href="https://gemini.google.com" target="_blank" class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 text-center hover:-translate-y-1 transition group">
+                    <span class="text-xl block mb-2 group-hover:scale-125 transition-transform">🎬</span>
+                    <span class="text-[9px] font-black uppercase text-slate-400">Gemini</span>
+                </a>
+                <a href="https://notebooklm.google.com" target="_blank" class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 text-center hover:-translate-y-1 transition group">
+                    <span class="text-xl block mb-2 group-hover:scale-125 transition-transform">📚</span>
+                    <span class="text-[9px] font-black uppercase text-slate-400">NotebookLM</span>
+                </a>
+                <a href="https://www.napkin.ai" target="_blank" class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 text-center hover:-translate-y-1 transition group">
+                    <span class="text-xl block mb-2 group-hover:scale-125 transition-transform">📊</span>
+                    <span class="text-[9px] font-black uppercase text-slate-400">Napkin AI</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="mt-24 text-center py-20 bg-indigo-600 rounded-[3rem] text-white px-6 shadow-2xl shadow-indigo-500/40">
+            <h3 class="text-3xl md:text-5xl font-black italic mb-6">On y va, on va créer ! 🚀</h3>
+            <p class="max-w-xl mx-auto text-indigo-100 text-sm md:text-base font-light mb-8 italic">"L'IA est le vent, vous êtes le capitaine. Sans vous, le bateau ne va nulle part. Avec vous, il va plus vite et plus loin." ✨</p>
+            <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="bg-white text-indigo-600 px-10 py-4 rounded-full font-black text-sm uppercase tracking-widest active:scale-95 transition shadow-xl">Retour en haut ⬆️</button>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white py-12 px-6 text-center border-t border-slate-800">
+        <div class="text-2xl font-black italic text-slate-700 mb-6">2026</div>
+        <div class="h-px w-16 bg-indigo-500 mx-auto mb-6"></div>
+        <div class="text-[10px] font-black tracking-[0.3em] uppercase opacity-60 mb-2">SITE CREATED BY PROF. MARIA GRAZIA BIANCO</div>
+        <p class="text-[8px] text-slate-500 uppercase tracking-widest leading-loose">
+            L'INTELLIGENCE ARTIFICIELLE AU SERVICE DU FLE 🍎<br>
+            TEACHING AND STUDYING RESOURCES
+        </p>
+    </footer>
+
+    <script>
+        function feedback(id, isOk, msg) {
+            const el = document.getElementById(id);
+            el.innerHTML = (isOk ? "🌟 " : "❌ ") + msg;
+            el.className = "mt-4 p-4 rounded-xl font-bold block " + (isOk ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700");
+        }
+
+        function toggleSol(id) {
+            const el = document.getElementById(id);
+            el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function testEx1() {
+            const a1 = document.getElementById('ex1-a1').value;
+            const a2 = document.getElementById('ex1-a2').value;
+            const b = document.getElementById('ex1-b').value;
+            const c = document.getElementById('ex1-c').value;
+            
+            if(a1 === 'gemini' && a2 === 'napkin' && b === 'notebook' && c === 'gpt') {
+                feedback('res1', true, "Parfait ! Vous avez sélectionné les outils optimaux pour chaque besoin.");
+            } else {
+                feedback('res1', false, "Presque ! N'oubliez pas : Vidéo = Gemini, PDF = NotebookLM, Humour = GPT.");
+            }
+        }
+
+        function testEx2() {
+            const r1 = document.getElementById('ex2-r1').value.toLowerCase();
+            const t1 = document.getElementById('ex2-t1').value.toLowerCase();
+            const r2 = document.getElementById('ex2-r2').value.toLowerCase();
+            const t2 = document.getElementById('ex2-t2').value.toLowerCase();
+
+            const ok1 = r1.includes('tuteur') && t1.includes('quiz');
+            const ok2 = r2.includes('poétique') && (t2.includes('histoire') || t2.includes('texte'));
+
+            if(ok1 && ok2) {
+                feedback('res2', true, "Bravo ! L'analyse de l'anatomie est impeccable.");
+            } else {
+                feedback('res2', false, "Vérifiez vos mots-clés. Rôle: Tuteur, Tâche: Quiz, Ton: Poétique, Sortie: Histoire.");
+            }
+        }
+
+        function testEx3() {
+            const c1 = document.getElementById('ex3-c1').value.length > 2;
+            const r1 = document.getElementById('ex3-r1').value.length > 2;
+            const a1 = document.getElementById('ex3-a1').value.length >= 2;
+            const r2 = document.getElementById('ex3-r2').value.length > 2;
+            const t2 = document.getElementById('ex3-t2').value.length > 2;
+            const e2 = document.getElementById('ex3-e2').value.length > 2;
+
+            if(c1 && r1 && a1 && r2 && t2 && e2) {
+                feedback('res3', true, "Excellent ! Vos deux structures de prompt sont solides.");
+            } else {
+                feedback('res3', false, "Veuillez remplir tous les champs pour valider l'architecture.");
+            }
+        }
+
+        function testEx4(n) {
+            if(n === 3 || n === 5) {
+                feedback('res4', true, "Correct ! C'est le prompt d'Architecte : précis et riche en contexte.");
+            } else {
+                feedback('res4', false, "Ce prompt est trop vague. L'IA risque de répondre à côté.");
+            }
+        }
+    </script>
+</body>
+</html>
